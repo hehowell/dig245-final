@@ -1,0 +1,31 @@
+.imgs {
+  display: flex;
+  justify-content: center;
+}
+
+.heading{
+  text-align:center;
+  font-size: 130px;
+}
+
+img{
+  width:20%;
+  padding-top: 80px;
+}
+form{
+  display: flex;
+  justify-content: center;
+  padding-top: 200px;
+  font-size: 100px;
+}
+
+input{
+  background: #FFF;
+  border-width: thick;
+  border-color: black;
+  padding: 0 40px;
+}
+
+input:hover {
+  background: #ff1212;
+}
