@@ -50,6 +50,9 @@ window.onload = (event) => {
 	console.log('hey')
 	var arr = randomize(_args);
 	sessionStorage.setItem("places", arr);
+	var clue_track = 0;
+	sessionStorage.setItem("clue_track", clue_track);
+
 
 	var length = arr.length;
 
@@ -80,43 +83,56 @@ window.onload = (event) => {
 };
 
 
-function Rando () {
-	console.log('hey')
-	var arr = randomize(_args);
-	sessionStorage.setItem("places", arr);
+$( "select" )
+  .change(function () {
 
-	var length = arr.length;
+		var num_clue = $("#num-clues option:selected").text();
+		console.log(num_clue);
+		sessionStorage.setItem("num_clue", num_clue);
 
-	$("#clue").empty();
-
-	var randclue = Math.floor(Math.random() * clues.length);
-	if (clues[randclue]) {
-		console.log(clues[randclue]);
-		console.log(arr[length-1]);
+  })
+.change();
 
 
-		$(".clue").append(
-			'<a href =assets/' +
-			arr[length-1] +
-			'_pages/' +
-			arr[length-1] +
-			'_' +
-			clues[randclue] +
-			'.html></a>'
-		);
 
-		// $('#clue').attr('onClick', 'location.href = ' + arr[length-1] + '_pages/' + arr[length-1] + '_' + clues[randclue] + '.html');
 
-		// $(".clue").append(
-		// 	'<div class = "next"><svg class="icon-arrow before"><use xlink:href="#arrow"></use></svg><form method="POST" action="assets' +
-		// 	arr[length-1] +
-		// 	'_pages/' +
-		// 	arr[length-1] +
-		// 	'_' +
-		// 	clues[randclue] +
-		// 	'.html"> <input type="submit" class="Next_Clue label" value="Next Clue!"/></form>'
-		// 	+
-		// 	'<svg class="icon-arrow after"><use xlink:href="#arrow"></use></svg></button></div>'
-		// );
-	}
-};
+// function Rando () {
+// 	console.log('hey')
+// 	var arr = randomize(_args);
+// 	sessionStorage.setItem("places", arr);
+//
+// 	var length = arr.length;
+//
+// 	$("#clue").empty();
+//
+// 	var randclue = Math.floor(Math.random() * clues.length);
+// 	if (clues[randclue]) {
+// 		console.log(clues[randclue]);
+// 		console.log(arr[length-1]);
+//
+//
+// 		$(".clue").append(
+// 			'<a href =assets/' +
+// 			arr[length-1] +
+// 			'_pages/' +
+// 			arr[length-1] +
+// 			'_' +
+// 			clues[randclue] +
+// 			'.html></a>'
+// 		);
+//
+// 		// $('#clue').attr('onClick', 'location.href = ' + arr[length-1] + '_pages/' + arr[length-1] + '_' + clues[randclue] + '.html');
+//
+// 		// $(".clue").append(
+// 		// 	'<div class = "next"><svg class="icon-arrow before"><use xlink:href="#arrow"></use></svg><form method="POST" action="assets' +
+// 		// 	arr[length-1] +
+// 		// 	'_pages/' +
+// 		// 	arr[length-1] +
+// 		// 	'_' +
+// 		// 	clues[randclue] +
+// 		// 	'.html"> <input type="submit" class="Next_Clue label" value="Next Clue!"/></form>'
+// 		// 	+
+// 		// 	'<svg class="icon-arrow after"><use xlink:href="#arrow"></use></svg></button></div>'
+// 		// );
+// 	}
+// };

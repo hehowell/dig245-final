@@ -14,7 +14,7 @@
 <body>
 
   <div class="heading">
-    CLUE
+
   </div>
 
   <div class="imgs">
@@ -41,6 +41,16 @@
       length = places.length;
       sessionStorage.setItem("places", places);
       sessionStorage.setItem("length", length);
+      var num_clue = sessionStorage.getItem("num_clue");
+      console.log(num_clue);
+      var clue_track = sessionStorage.getItem("clue_track");
+      clue_track++;
+      sessionStorage.setItem("clue_track", clue_track);
+      console.log(clue_track);
+
+      $(".heading").append(
+        "CLUE " + clue_track
+      );
 
     </script>
 </body>
