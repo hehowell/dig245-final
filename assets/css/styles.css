@@ -1,12 +1,14 @@
 html, body {
     display: grid;
     height: 40%;
+    font-family: 'Stoke', serif;
+
+
 }
 
 *{
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
 .banner{
@@ -27,7 +29,7 @@ html, body {
 }
 
 .content h1 {
-  font-size: 70px;
+  font-size: 90px;
   margin-top: 80px;
 }
 
@@ -44,7 +46,7 @@ button, .next{
     color: #fff;
     background: none;
     display: inline-block;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 24px;
     margin: auto;
@@ -139,22 +141,11 @@ form{
 
 #num-clues {
   margin-bottom: 50px;
+  font-size: 30px;
+  padding: 0 10px;
+  margin-left: 10px;
 }
 
-
-
-/* h1, h3{
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
+label{
+    font-size: 30px;
 }
-
-h1{
-  font-weight: 600;
-}
-
-
-.bod{
-  text-align: center;
-  font-family: 'Raleway', sans-serif;
-  font-weight: light;
-} */
