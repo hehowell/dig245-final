@@ -13,21 +13,19 @@
 </head>
 <body>
 
+  <div class="banner">
+    <div class="content">
+      <div class="img_align">
 
+          <p>What is the fourth letter of the fifth word on the plaque found on the west corner of the building: <input class="answer" type="string" value="" /></p>
+          <button>Submit</button>
 
-      <div class="banner">
-        <div class="content">
-          <div class="img_align">
-
-              <p>What is the fourth letter of the fifth word on the plaque found on the west corner of the building: <input class="answer" type="string" value="" /></p>
-              <button>Submit</button>
-
-          </div>
-
-
-          <div class="next_page"></div>
-        </div>
       </div>
+
+
+      <div class="next_page"></div>
+    </div>
+  </div>
 
 
 
@@ -47,7 +45,7 @@
 
       var answers = ['a', 'b', 'c', 'd'];
       let correct = 0;
-      var clues = ['braille', 'img', 'rhyme'];
+      var clues = ['0', '1', '2'];
       var randclue = Math.floor(Math.random() * clues.length);
       counter = MYLIBRARY.counter();
       var num_clue = sessionStorage.getItem("num_clue");
@@ -89,8 +87,6 @@
 
         };
       }});
-
-
 
 
     </script>

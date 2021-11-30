@@ -16,7 +16,14 @@ body{
 img{
   width:20%;
   padding-top: 80px;
+  border-style: dashed;
+  border-right: 2em;
 }
+
+.braille_img_last {
+  border-right: dashed;
+}
+
 form{
   display: flex;
   justify-content: center;

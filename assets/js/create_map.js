@@ -2,12 +2,13 @@
 /* javascript */
 
 
-var clues = ['braille', 'img', 'rhyme'];
+var clues = ['0', '1', '2'];
 
 var answers = ['a', 'b', 'c', 'd'];
 
 // var _args = ["vac", "chambers", "commons", "baker", "nummit", "wall"];
-var _args = ["vac", "baker", "nummit", "chambers"];
+var _args = ["0", "1", "2", "3", "4"];
+// var _args = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 
 function randomize(_args) {
 	let currentIndex = _args.length,  randomIndex;
@@ -47,7 +48,6 @@ function shuffle(array) {
 // Used like so
 
 window.onload = (event) => {
-	console.log('hey')
 	var arr = randomize(_args);
 	sessionStorage.setItem("places", arr);
 	var clue_track = 0;
