@@ -2,7 +2,7 @@
 /* javascript */
 
 
-var clues = ['0', '1', '2'];
+var clues = ['0', '1', '2', '3'];
 
 var answers = ['a', 'b', 'c', 'd'];
 

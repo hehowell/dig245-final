@@ -1,5 +1,5 @@
 body{
-  font-family: 'Stoke', serif;
+  font-family: 'Amatic SC', cursive;
 }
 
 .imgs {
@@ -16,12 +16,15 @@ body{
 img{
   width:20%;
   padding-top: 80px;
+}
+
+.braille_img {
   border-style: dashed;
   border-right: 2em;
 }
 
 .braille_img_last {
-  border-right: dashed;
+  border-style: dashed;
 }
 
 form{
