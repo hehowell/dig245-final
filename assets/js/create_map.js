@@ -65,7 +65,7 @@ window.onload = (event) => {
 
 
 		$(".clue").append(
-			'<a class="clue" href= "assets/' +
+			'<a class="clue" href= "' +
 						arr[length-1] +
 						'_pages/' +
 						arr[length-1] +

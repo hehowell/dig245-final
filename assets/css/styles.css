@@ -92,7 +92,7 @@ form .label {
 button .icon-arrow,
 .next .icon-arrow {
     fill: #fff;
-    height: 15px;
+    height: 23px;
     top: 17px;
     transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
     width: 35px;
