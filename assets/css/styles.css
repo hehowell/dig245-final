@@ -1,5 +1,24 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
     font-family: 'Sen', sans-serif;
+}
+
+.banner_start{
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/davidson.jpeg);
+}
+
+.banner_finish{
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 }
 
 body{
@@ -11,18 +30,8 @@ body{
   background-color: #464646;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
 
-.banner{
-  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/davidson.jpeg);
-}
 
-.banner_finish{
-  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
-}
 
 /* .banner_instructions{
   background-repeat: no-repeat;

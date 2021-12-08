@@ -23,8 +23,12 @@
           KEY
         </div>
 
-          <p>What is the fourth letter of the fifth word on the plaque found on the west corner of the building: <input class="answer" type="string" value="" /></p>
-          <button>Submit</button>
+        <div id="plaque"></div>
+
+        <input class="answer" type="string" value="" />
+
+
+        <button>Submit</button>
 
       </div>
 
@@ -38,64 +42,9 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- <script src="assets/js/main.js"></script> -->
-    <!-- <script src="assets/js/create_map.js"></script> -->
-
     <script src="../js/init.js"></script>
-    <!-- <script src="../js/create_map.js"></script> -->
-    <script type="text/javascript">
-      var places = sessionStorage.getItem("places");
-      var length = sessionStorage.getItem("length");
-      console.log(places);
-      console.log(length);
+    <script src="../js/main.js"></script>
 
-      var answers = ['a', 'b', 'c', 'd'];
-      let correct = 0;
-      var clues = ['0', '1', '2'];
-      var randclue = Math.floor(Math.random() * clues.length);
-      counter = MYLIBRARY.counter();
-      var num_clue = sessionStorage.getItem("num_clue");
-      var clue_track = sessionStorage.getItem("clue_track");
-
-      console.log(counter);
-
-      $("button").on("click", function (e) {
-        if ($(".answer").val() === answers[0]) {
-
-
-          correct = 1;
-          if(correct === 1){
-
-            if (clue_track < num_clue) {
-              $(".next_page").empty();
-              if (clues[randclue]) {
-                $(".next_page").append(
-                  '<form method="POST" action="../' +
-                  places.split(',')[length-1] +
-                  '_pages/' +
-                  places.split(',')[length-1] +
-                  '_' +
-                  clues[randclue] +
-                  '.html"> <input type="submit" class="Next_Clue" value="Next Clue!"/> </form>'
-                );
-              };
-            }
-            else{
-              $(".next_page").empty();
-              if (clues[randclue]) {
-                $(".next_page").append(
-                  '<form method="POST" action="../' +
-                  'finish.html"> <input type="submit" class="Next_Clue" value="Finish!"/> </form>'
-                );
-              };
-            }
-
-
-        };
-      }});
-
-
-    </script>
 
 </body>
 </html>
