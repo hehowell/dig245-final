@@ -1,206 +1,361 @@
+@media screen and (min-width: 300px) {
+  *{
+    margin: 0;
+    padding: 0;
+  }
 
-*{
-  margin: 0;
-  padding: 0;
-}
+  html, body {
+      font-family: 'Sen', sans-serif;
+  }
 
-html, body {
-    font-family: 'Sen', sans-serif;
-}
+  .banner_start{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/davidson.jpeg);
+  }
 
-.banner_start{
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/davidson.jpeg);
-}
+  .banner_finish{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  }
 
-.banner_finish{
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-}
+  body{
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+  }
 
-body{
-  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../img/finish.jpeg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  background-color: #464646;
-}
-
-.content{
-  width: 100%;
-  position: absolute;
-  text-align: center;
-  color: #fff;
-}
-
-.sf p{
-  background: #ffffff;
-  color: black;
-  padding: 30px;
-}
-
-.content h1 {
-  font-size: 90px;
-  margin-top: 80px;
-  font-family: 'Amatic SC', cursive;
-}
-
-
-.content p{
-  margin: 60px 20%;
-  font-weight:  500;
-  font-size: 20px;
-  line-height: 35px;
-}
-
-.content h3{
-  margin: 5% 10%;
-  font-weight:  500;
-  line-height: 25px;
-}
-
-button, .next{
-  font-family: 'Amatic SC', cursive;
-  border: 4px solid #fff;
-  color: #fff;
-  background: none;
-  display: inline-block;
-  font-size: 30px;
-  letter-spacing: 4px;
-  font-weight: bold;
-  line-height: 30px;
-  margin: auto;
-  padding: 12px 32px 12px 82px;
-  position: relative;
-  text-decoration: none;
-  margin-bottom: 100px;
-}
-
-
-
-button .label,
-button .icon-arrow,
-.next .label,
-.next .icon-arrow  {
-    backface-visibility: hidden;
-    transform: translateZ(0);
-    perspective: 1000;
-}
-
-button .label,
-.next .label,
-form .label {
-    display: inline-block;
-    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
-}
-
-button .icon-arrow,
-.next .icon-arrow {
-    fill: #fff;
-    height: 23px;
-    top: 17px;
-    transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
-    width: 35px;
-}
-
-button .icon-arrow.before,
-.next .icon-arrow.before  {
-    left: 32px;
-    margin-right: 15px;
+  .content{
+    width: 100%;
     position: absolute;
-    transform-origin: left center;
-}
-
-button .icon-arrow.after,
-.next .icon-arrow.after {
-    margin-left: 15px;
-    opacity: 0;
-    position: absolute;
-    right: 32px;
-    transform: translateX(75%) scaleX(0.1);
-    transform-origin: right center;
-}
-
-button:hover .label,
-.next:hover .label{
-    transform: translateX(-52px);
-}
-
-button:hover .icon-arrow.before,
-.next:hover .icon-arrow.before {
-    opacity: 0;
-    transform: translateX(-75%) scaleX(0.1);
-}
-
-button:hover .icon-arrow.after,
-.next:hover .icon-arrow.after {
-    opacity: 1;
-    transform: translateX(0) scaleX(1);
-}
-
-button:active,
-.next:active {
-    border-color: #fff;
+    text-align: center;
     color: #fff;
+  }
+
+  .sf p{
+    background: #ffffff;
+    color: black;
+    padding: 30px;
+  }
+
+  .content h1 {
+    font-size: 60px;
+    margin-top: 60px;
+    font-family: 'Amatic SC', cursive;
+  }
+
+  .content p{
+    margin: 30px 20%;
+    font-weight:  500;
+    font-size: 10px;
+    line-height: 20px;
+  }
+
+  .content h3, .clue_line{
+    margin: 5% 10%;
+    font-weight:  500;
+    line-height: 25px;
+  }
+
+  button, .next{
+    font-family: 'Amatic SC', cursive;
+    border: 4px solid #fff;
+    color: #fff;
+    background: none;
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    line-height: 30px;
+    margin: auto;
+    padding: 12px 32px 12px 82px;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 100px;
+  }
+
+  button .label,
+  button .icon-arrow,
+  .next .label,
+  .next .icon-arrow  {
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      perspective: 1000;
+  }
+
+  button .label,
+  .next .label,
+  form .label {
+      display: inline-block;
+      transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+  }
+
+  button .icon-arrow,
+  .next .icon-arrow {
+      fill: #fff;
+      height: 23px;
+      top: 17px;
+      transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
+      width: 35px;
+  }
+
+  button .icon-arrow.before,
+  .next .icon-arrow.before  {
+      left: 32px;
+      margin-right: 15px;
+      position: absolute;
+      transform-origin: left center;
+  }
+
+  button .icon-arrow.after,
+  .next .icon-arrow.after {
+      margin-left: 15px;
+      opacity: 0;
+      position: absolute;
+      right: 32px;
+      transform: translateX(75%) scaleX(0.1);
+      transform-origin: right center;
+  }
+
+  button:hover .label,
+  .next:hover .label{
+      transform: translateX(-52px);
+  }
+
+  button:hover .icon-arrow.before,
+  .next:hover .icon-arrow.before {
+      opacity: 0;
+      transform: translateX(-75%) scaleX(0.1);
+  }
+
+  button:hover .icon-arrow.after,
+  .next:hover .icon-arrow.after {
+      opacity: 1;
+      transform: translateX(0) scaleX(1);
+  }
+
+  button:active,
+  .next:active {
+      border-color: #fff;
+      color: #fff;
+  }
+
+  button:active .icon-arrow,
+  .next:active .icon-arrow {
+      fill: #fff;
+  }
+
+  form, .Next_Clue{
+    padding: 0;
+  	background: none;
+  	border: none;
+  	border-radius: 0;
+  	outline: none;
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	appearance: none;
+  }
+
+  form{
+    padding-bottom: 100px;
+  }
+
+  .Next_Clue {
+    color: white;
+    border-style: solid;
+    padding: 1%;
+  }
+
+  #num-clues {
+    margin-bottom: 50px;
+    font-size: 30px;
+    padding: 0 10px;
+    margin-left: 10px;
+  }
+
+  label{
+      font-size: 20px;
+  }
+
+  ul {
+    list-style-type: square;
+    padding-left: 20%;
+    padding-right: 10%;
+  }
+
+  ul li, ol li {
+    line-height: 1.5;
+    text-align:left;
+  }
+
+
+  ol {
+    list-style-type: lower-alpha
+  }
+
+
+  .box{
+    border-style: solid;
+    margin: 50px 10%;
+    width: auto;
+    background-color: #FF6865;
+    font-size: 10px;
+  }
+
+  h3{
+    font-size: 18px;
+  }
+
+
 }
 
-button:active .icon-arrow,
-.next:active .icon-arrow {
-    fill: #fff;
-}
+@media screen and (min-width: 600px) {
 
-form, .Next_Clue{
-  padding: 0;
-	background: none;
-	border: none;
-	border-radius: 0;
-	outline: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
+  .sf p{
+    background: #ffffff;
+    color: black;
+    padding: 30px;
+  }
 
-.Next_Clue {
-  color: white;
-  border-style: solid;
-  padding: 1%;
-}
 
-#num-clues {
-  margin-bottom: 50px;
-  font-size: 30px;
-  padding: 0 10px;
-  margin-left: 10px;
-}
+  .content h1 {
+    font-size: 90px;
+    margin-top: 80px;
+    font-family: 'Amatic SC', cursive;
+  }
 
-label{
+  .content p{
+    margin: 60px 20%;
+    font-weight:  500;
     font-size: 20px;
-}
+    line-height: 35px;
+  }
 
-ul {
-  list-style-type: square;
-  padding-left: 20%;
-  padding-right: 10%;
-}
+  .content h3{
+    margin: 5% 10%;
+    font-weight:  500;
+    line-height: 25px;
+  }
 
-ul li, ol li {
-  line-height: 1.5;
-  text-align:left;
-}
+  button, .next{
+    font-family: 'Amatic SC', cursive;
+    border: 4px solid #fff;
+    color: #fff;
+    background: none;
+    display: inline-block;
+    font-size: 30px;
+    letter-spacing: 4px;
+    font-weight: bold;
+    line-height: 30px;
+    margin: auto;
+    padding: 12px 32px 12px 82px;
+    position: relative;
+    text-decoration: none;
+    margin-bottom: 100px;
+  }
 
 
-ol {
-  list-style-type: lower-alpha
-}
+    button .label,
+    button .icon-arrow,
+    .next .label,
+    .next .icon-arrow  {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        perspective: 1000;
+    }
 
+    button .label,
+    .next .label,
+    form .label {
+        display: inline-block;
+        transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1);
+    }
 
-.box{
-  border-style: solid;
-  margin: 50px 30%;
-  width: auto;
-  background-color: #FF6865;
+    button .icon-arrow,
+    .next .icon-arrow {
+        fill: #fff;
+        height: 23px;
+        top: 17px;
+        transition: transform .5s cubic-bezier(0.86, 0, 0.07, 1), opacity .4s cubic-bezier(0.86, 0, 0.07, 1);
+        width: 35px;
+    }
+
+    button .icon-arrow.before,
+    .next .icon-arrow.before  {
+        left: 32px;
+        margin-right: 15px;
+        position: absolute;
+        transform-origin: left center;
+    }
+
+    button .icon-arrow.after,
+    .next .icon-arrow.after {
+        margin-left: 15px;
+        opacity: 0;
+        position: absolute;
+        right: 32px;
+        transform: translateX(75%) scaleX(0.1);
+        transform-origin: right center;
+    }
+
+    button:hover .label,
+    .next:hover .label{
+        transform: translateX(-52px);
+    }
+
+    button:hover .icon-arrow.before,
+    .next:hover .icon-arrow.before {
+        opacity: 0;
+        transform: translateX(-75%) scaleX(0.1);
+    }
+
+    button:hover .icon-arrow.after,
+    .next:hover .icon-arrow.after {
+        opacity: 1;
+        transform: translateX(0) scaleX(1);
+    }
+
+    form{
+      padding-bottom: 100px;
+    }
+
+    .Next_Clue {
+      color: white;
+      border-style: solid;
+      padding: 1%;
+    }
+
+    #num-clues {
+      margin-bottom: 50px;
+      font-size: 30px;
+      padding: 0 10px;
+      margin-left: 10px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20%;
+      padding-right: 10%;
+    }
+
+    ul li, ol li {
+      line-height: 1.5;
+      text-align:left;
+    }
+
+    .box{
+      border-style: solid;
+      margin: 50px 20%;
+      width: auto;
+      background-color: #FF6865;
+    }
 }
