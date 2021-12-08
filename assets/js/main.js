@@ -8,8 +8,7 @@ console.log(length);
 console.log(last);
 
 
-var answers = ["BUILDING COMMITTEE WM. J. MARTIN CHM. S.A. ROBINSON C.M. RICHARDS F.L. JACKSON J.M. McCONNELL ARCHITECT HENRY C. HIBBS BUILDERS BYTHE AND ISENHOUR",
-"DAVIDSON COLLEGE Katherine and Tom Belk Visual Arts Center", "BEN CRAIG PLAZA Honoring BEN T. CRAIG ‘54 1933-1988 Scholar Athlete Business Leader Christian Gentleman Davidson Trustee 1973-1988 Chairman 1985-1988 First Union Corporation President 1985-1988 A Memorial Gift from THE FIRST UNION FOUNDATION", "SUMMIT COFFEE CO. EST 1998", "VAIL COMMONS", "PAT PERONI GREENHOUSE Given in memory of Patricia Peroni, Ph.D., botanist and long-time Biology and Environmental Studies professor, through support from family, friends, and colleagues. Located on the north-east roof of E. Crag Wall, Jr. Academic Center Dedicated October 2021", "THIS STRUCTURE STANDS BECAUSE OF THE GENEROSITY OF EDWARD HERMAN LITTLE LL. D. DAVIDSON 1953 SON OF MECKLENBURG PRESIDENT AND CHAIRMAN OF COLGATE-PALMOLIVE 1938-1960 BENEFACTOR OF EDUCATION AND CONSTANT FRIEND OF DAVIDSON COLLEGE DEDICATED SEPTEMBER 27, 1974", "ALVAREZ COLLEGE UNION", "W.H. BELK HALL", "Welcome to the Davidson College Labyrinth and Peace Garden The labyrinth is a path for walking meditation. It has no false turns or dead ends. There is no “right” or “wrong” way to walk a labyrinth."];
+var answers = ["BUILDING COMMITTEE WM. J. MARTIN CHM. S.A. ROBINSON C.M.", "DAVIDSON COLLEGE Katherine and Tom Belk Visual Arts Center", "BEN CRAIG PLAZA Honoring BEN T. CRAIG ‘54 1933-1988 Scholar Athlete Business Leader Christian", "SUMMIT COFFEE CO. EST 1998", "VAIL COMMONS", "E. CRAIG WALL, JR. ACADEMIC CENTER", "THIS STRUCTURE STANDS BECAUSE OF THE GENEROSITY OF EDWARD HERMAN LITTLE", "ALVAREZ COLLEGE UNION", "W.H. BELK HALL", "Welcome to the Davidson College Labyrinth and Peace Garden The labyrinth is a path for walking meditation."];
 let correct = 0;
 var clues = ['0', '1', '2', '3'];
 var randclue = Math.floor(Math.random() * clues.length);
@@ -32,31 +31,37 @@ console.log(answer_key);
 function add0() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the plaque on the North side of the North West wall (the one facing Belk) and type in the characters at the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is B)</p>";
-    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
 function add1() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the sign/structure on the North Eastern corner of the building and on the side facing away from the road, find the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is D) </p>";
-    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
 function add2() {
     document.getElementById("plaque").innerHTML +=
       "<p>At the Western Entrance, find the plaque for the Plaza that is closest to the road and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is B)</p>";
-    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
 function add3() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the sign at the top of the Eastern facing entrance and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is S)</p>";
-    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
 function add4() {
     document.getElementById("plaque").innerHTML +=
-      "<p>At either of the Southern facing enterances, find the plaque that is adjacent to the door and type in the characters " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is S)</p>";
-    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
+      "<p>At either of the Southern facing enterances, find the plaque that is adjacent to the door and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is S)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
+}
+
+function add5() {
+    document.getElementById("plaque").innerHTML +=
+      "<p>On the Northern facing wall, find the title of the building above the doorway and type in the characters in the  " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is E)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
 
@@ -74,6 +79,9 @@ if (last == 3){
 }
 if (last == 4){
   add4();
+}
+if (last == 5){
+  add5();
 }
 
 
@@ -93,7 +101,7 @@ $("button").on("click", function (e) {
         $(".next_page").empty();
         if (clues[randclue]) {
           $(".next_page").append(
-            '<form method="POST" action="../' +
+            '<form action="../' +
             places.split(',')[length-1] +
             '_pages/' +
             places.split(',')[length-1] +
@@ -107,7 +115,7 @@ $("button").on("click", function (e) {
         $(".next_page").empty();
         if (clues[randclue]) {
           $(".next_page").append(
-            '<form method="POST" action="../' +
+            '<form action="../' +
             'finish.html"> <input type="submit" class="Next_Clue" value="Finish!"/> </form>'
           );
         };
@@ -115,4 +123,10 @@ $("button").on("click", function (e) {
 
 
   };
-}});
+
+
+}
+else{
+  alert("Oh no! That's not quite right! Make sure to be careful about your counting!");
+};
+});

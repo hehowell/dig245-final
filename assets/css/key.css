@@ -34,10 +34,11 @@ form{
   margin-bottom: 20px;
 }
 
-.banner{
-  width: 100%;
-  height: 100vh;
+body{
   background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url(../img/background.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
 }
@@ -48,6 +49,23 @@ form{
   text-align: center;
   color: #fff;
 }
+
+button{
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: white;
+  border-style: solid;
+  padding: 0.5%;
+  margin-left: 1%;
+}
+
+p, h5{
+  padding: 0 15%;
+}
+
 
 p, button{
   font-family: 'Sen', sans-serif;
@@ -61,6 +79,7 @@ h5, h2 {
 h5{
   margin-bottom: 50px;
   margin-top: 20px;
+  line-height: 200%;
 }
 
 h2{
