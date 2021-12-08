@@ -53,3 +53,16 @@ p, button{
   font-family: 'Sen', sans-serif;
   font-size: 20pt;
 }
+
+h5, h2 {
+  font-family: 'Sen', sans-serif;
+}
+
+h5{
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+h2{
+  margin-top: 50px;
+}

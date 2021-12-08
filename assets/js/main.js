@@ -32,26 +32,31 @@ console.log(answer_key);
 function add0() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the plaque on the North side of the North West wall (the one facing Belk) and type in the characters at the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is B)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
 }
 
 function add1() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the sign/structure on the North Eastern corner of the building and on the side facing away from the road, find the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is D) </p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
 }
 
 function add2() {
     document.getElementById("plaque").innerHTML +=
       "<p>At the Western Entrance, find the plaque for the Plaza that is closest to the road and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is B)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
 }
 
 function add3() {
     document.getElementById("plaque").innerHTML +=
       "<p>Find the sign at the top of the Eastern facing entrance and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is S)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
 }
 
 function add4() {
     document.getElementById("plaque").innerHTML +=
       "<p>At either of the Southern facing enterances, find the plaque that is adjacent to the door and type in the characters " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is S)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well.</h5>"
 }
 
 

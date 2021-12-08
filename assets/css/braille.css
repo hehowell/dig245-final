@@ -45,3 +45,7 @@ input{
 input:hover {
   background: #ff1212;
 }
+
+.hands_img{
+  width: 70%;
+}
