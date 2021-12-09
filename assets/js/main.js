@@ -8,7 +8,7 @@ console.log(length);
 console.log(last);
 
 
-var answers = ["BUILDING COMMITTEE WM. J. MARTIN CHM. S.A. ROBINSON C.M.", "DAVIDSON COLLEGE Katherine and Tom Belk Visual Arts Center", "BEN CRAIG PLAZA Honoring BEN T. CRAIG ‘54 1933-1988 Scholar Athlete Business Leader Christian", "SUMMIT COFFEE CO. EST 1998", "VAIL COMMONS", "E. CRAIG WALL, JR. ACADEMIC CENTER", "THIS STRUCTURE STANDS BECAUSE OF THE GENEROSITY OF EDWARD HERMAN LITTLE", "ALVAREZ COLLEGE UNION", "W.H. BELK HALL", "Welcome to the Davidson College Labyrinth and Peace Garden The labyrinth is a path for walking meditation."];
+var answers = ["BUILDING COMMITTEE WM. J. MARTIN CHM. S.A. ROBINSON C.M.", "DAVIDSON COLLEGE Katherine and Tom Belk Visual Arts Center", "BEN CRAIG PLAZA Honoring BEN T. CRAIG ‘54 1933-1988", "SUMMIT COFFEE CO. EST 1998", "VAIL COMMONS", "E. CRAIG WALL, JR. ACADEMIC CENTER", "THIS STRUCTURE STANDS BECAUSE OF THE GENEROSITY OF EDWARD HERMAN LITTLE", "ALVAREZ COLLEGE UNION", "W.H. BELK HALL", "Welcome to the Davidson College Labyrinth and Peace Garden"];
 let correct = 0;
 var clues = ['0', '1', '2', '3'];
 var randclue = Math.floor(Math.random() * clues.length);
@@ -60,10 +60,33 @@ function add4() {
 
 function add5() {
     document.getElementById("plaque").innerHTML +=
-      "<p>On the Northern facing wall, find the title of the building above the doorway and type in the characters in the  " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is E)</p>";
+      "<p>On the Northern facing wall, find the title of the building above the doorway and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is E)</p>";
     document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
 }
 
+function add6() {
+    document.getElementById("plaque").innerHTML +=
+      "<p>On the Eastern facing wall, find the stone engraved plaque adjacent to the entrance and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is T)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
+}
+
+function add7() {
+    document.getElementById("plaque").innerHTML +=
+      "<p>On the Eastern facing wall, find the stone engraved building title above the entrance and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is A)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
+}
+
+function add8() {
+    document.getElementById("plaque").innerHTML +=
+      "<p> Find the engraved title of the building above the entrance on the Southern facing side and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is W)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
+}
+
+function add9() {
+    document.getElementById("plaque").innerHTML +=
+      "<p> Find the sign at the entrance to the labyrinth and type in the characters in the " + randL1 + ", " + randL2 + " and " + randL3 + " positions. (The first character is W)</p>";
+    document.getElementById("plaque").innerHTML += "<h2> Reminder: </h2><h5> Keys are CASE SENSITIVE and SPACE/PUNCTUATION inclusive as well. Additionally, a new line is treated as a space.</h5>"
+}
 
 if (last == 0){
   add0();
@@ -83,6 +106,18 @@ if (last == 4){
 if (last == 5){
   add5();
 }
+if (last == 6){
+  add6();
+}
+if (last == 7){
+  add7();
+}
+if (last == 8){
+  add8();
+}
+if (last == 9){
+  add9();
+}
 
 
 
@@ -92,10 +127,15 @@ $("button").on("click", function (e) {
 
   if ($(".answer").val() === answer_key) {
 
+    $(".img_align").empty();
 
 
     correct = 1;
     if(correct === 1){
+      
+      if (num_clue == 10) {
+        num_clue = 10;
+      }
 
       if (clue_track < num_clue) {
         $(".next_page").empty();
@@ -127,6 +167,6 @@ $("button").on("click", function (e) {
 
 }
 else{
-  alert("Oh no! That's not quite right! Make sure to be careful about your counting!");
+  alert("Oh no! That's not quite right! Make sure to be careful about your counting! You got this!!");
 };
 });

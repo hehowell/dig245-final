@@ -3,6 +3,8 @@ var places = sessionStorage.getItem("places");
 var length = 0;
 var last;
 
+console.log(places);
+
 places = places.split(',');
 last = places.pop();
 sessionStorage.setItem("last", last);

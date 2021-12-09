@@ -203,7 +203,8 @@
     border-style: solid;
     margin: 50px 10%;
     width: auto;
-    background-color: #FF6865;
+    background-color: #FFF;
+    color: black;
     font-size: 10px;
   }
 
@@ -217,9 +218,12 @@
 @media screen and (min-width: 600px) {
 
   .sf p{
-    background: #ffffff;
+    border-style: solid;
+    margin: 50px 20%;
+    width: auto;
+    background-color: #FFF;
     color: black;
-    padding: 30px;
+    font-size: 10px;
   }
 
 
@@ -353,9 +357,14 @@
     }
 
     .box{
-      border-style: solid;
       margin: 50px 20%;
-      width: auto;
-      background-color: #FF6865;
     }
+}
+
+@media screen and (min-width: 1000px) {
+
+  .box{
+    margin: 50px 30%;
+  }
+
 }
